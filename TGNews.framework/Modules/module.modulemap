@@ -1,0 +1,6 @@
+framework module TGNews {
+  umbrella header "TGNews.h"
+
+  export *
+  module * { export * }
+}

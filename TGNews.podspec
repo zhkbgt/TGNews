@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TGNews'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TGNews.'
+  s.summary          = 'TGNews pod'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,30 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/zh神夕/TGNews'
+  s.homepage         = 'https://github.com/zhkbgt/TGNews'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zh神夕' => 'kkbbggtt@163.com' }
-  s.source           = { :git => 'https://github.com/zh神夕/TGNews.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/zhkbgt/TGNews.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+#  s.xcconfig = {
+ #   'ENABLE_BITCODE' => 'NO'
+ # }
 
-  s.source_files = 'TGNews/Classes/**/*'
+  s.ios.deployment_target = '10.0'
+
+  #s.source_files = 'TGNews/Classes/**/*'
   
   # s.resource_bundles = {
   #   'TGNews' => ['TGNews/Assets/*.png']
   # }
 
+  s.vendored_frameworks = 'TGNews.framework'
+  
+  s.libraries = 'icucore', 'c++', 'bsm', 'z'
+
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'MapKit', 'WebKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
