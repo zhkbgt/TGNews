@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TGNews'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'TGNews pod'
 
 # This description is used to generate tags and improve search results.
@@ -32,13 +32,13 @@ TODO: Add long description of the pod here.
  #   'ENABLE_BITCODE' => 'NO'
  # }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
 
   #s.source_files = 'TGNews/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'TGNews' => ['TGNews/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'TGNews' => ['TGNews/Assets/*']
+  }
 
   s.vendored_frameworks = 'TGNews.framework'
   
